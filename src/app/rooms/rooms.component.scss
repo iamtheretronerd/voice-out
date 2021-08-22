@@ -1,0 +1,87 @@
+:host {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+h4{
+  text-align: center;
+}
+.rooms {
+  flex: 1;
+  padding: 15px;
+  max-height: calc( 100vh - 45px );
+  overflow: auto;
+}
+.card {
+  padding: 15px;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  margin-bottom: 15px;
+}
+.card:hover{
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.create-room {
+  overflow: hidden;
+  padding: 30px 15px 15px;
+  background: rgb(241, 239, 229);
+  background: linear-gradient(
+    90deg,
+    rgba(241, 239, 229, 1) 0%,
+    rgba(241, 239, 229, 1) 15%,
+    rgba(241, 239, 229, 1) 100%
+  );
+
+  .btn {
+    background-color: #f1efe5;
+    border-color: #000000;
+    color: rgb(0, 0, 0);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: #000000;
+    color: white;
+  }
+
+  .room-details {
+    bottom: -200px;
+  }
+
+  &.shown {
+    & > .btn {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .room-details {
+      bottom: 15px;
+    }
+  }
+}
+
+.room-details {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  transition: all 0.1s ease-in;
+  position: fixed;
+  width: calc(100% - 30px);
+  left: 15px;
+  input {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  label {
+    display: block;
+    margin-bottom: 15px;
+  }
+}
