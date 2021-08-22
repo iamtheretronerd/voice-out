@@ -119,8 +119,8 @@ export class RoomComponent implements OnInit, OnDestroy {
   private joinStream(): void {
     this.streamOptions.streamID = this.roomId;
     this.client.join(
-      '0061075a42f93ee41869b49b758f782265aIACPooZkk/sz0PFFiDUtyk1SVNLRWSCddtqQtDotptLoVceb2ckAAAAAEAADESomH2YjYQEAAQAeZiNh',
-      'voiceout',
+      'id',
+      'name',
       null,
       null,
       (uid) => {
